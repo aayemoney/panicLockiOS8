@@ -15,30 +15,27 @@
 @implementation panicLockData
 
 static BOOL isPanicLockActive;
-static NSLock *accessLock;
 
 + (BOOL)isPanicLockActive {
 
-	[panicLockData ensureLockAlloc];
 	return isPanicLockActive;
 
 }
 
 + (void)flipPanicLockStatus {
 
-	[panicLockData ensureLockAlloc];
+	if (isPanicLockActive) {
 
-}
+		isPanicLockActive = false;
 
-+ (void)ensureLockAlloc {
+	}
 
-	if (accessLock == nil) {
+	else {
 
-		accessLock = [[NSLock alloc] init];
+		isPanicLockActive = true;
 
 	}
 
 }
 
 @end
-
