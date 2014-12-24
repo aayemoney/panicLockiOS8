@@ -3,55 +3,13 @@
 // panicLockPro by Ruslan Ardashev 
 // ruslan.ardashev@duke.edu
 // www.ruslanArdashev.com
-// Copyright 2014
+// Copyright 2015
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-#import <libactivator/libactivator.h>
 #include "../panicLockData.h"
 
 #define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproios8prefs.plist"
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Activator Portion
-//
-////////////////////////////////////////////////////////////////////////////////////////////
-
-@interface panicLockiOS8Listener : NSObject <LAListener>
-@end
- 
-
-@implementation panicLockiOS8Listener
- 
-+ (void)load {
-
-	if ([LASharedActivator isRunningInsideSpringBoard]) {
-		[LASharedActivator registerListener:[self new] forName:@"com.ruslan.paniclockproios8"];
-	}
-
-}
-
-- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event
-{
-
-	if (YES) NSLog(@"ra86 tweak root detected activator action.");
- 
-	[event setHandled:YES]; // To prevent the default OS implementation
-
-	return;
-}
- 
-- (void)activator:(LAActivator *)activator abortEvent:(LAEvent *)event {
-		
-	if (YES) NSLog(@"activatorAbortEvent called.");
-
-	// Dismiss your plugin
-
-}
-
-@end
 
 
 
