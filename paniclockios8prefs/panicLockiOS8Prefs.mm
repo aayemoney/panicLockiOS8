@@ -19,7 +19,7 @@
 
 -(void) openInstructions
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=0jrsolwbXxM"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=QFnOcuC28XQ"]];
 }
 
 -(void) openYoutubeChannel
