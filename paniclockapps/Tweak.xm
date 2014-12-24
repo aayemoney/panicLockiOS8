@@ -9,7 +9,25 @@
 
 #include "../panicLockData.h"
 
+%hook SBApplicationIcon
 
+- (void)launchFromLocation:(int)arg1 {
+
+	if ([panicLockData isPanicLockActive]) {
+
+		return;
+
+	}
+
+	else {
+
+		%orig;
+		
+	}
+
+}
+
+%end
 
 
 /* How to Hook with Logos
