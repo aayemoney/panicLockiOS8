@@ -1,7 +1,16 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+// panicLockPro by Ruslan Ardashev 
+// ruslan.ardashev@duke.edu
+// www.ruslanArdashev.com
+// Copyright 2014
+//
+////////////////////////////////////////////////////////////////////////////////////////////
+
+#import <libactivator/libactivator.h>
 #include "../panicLockData.h"
 
-
-
+#define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproprefs.plist"
 
 
 
