@@ -1,7 +1,12 @@
-include theos/makefiles/common.mk
+export ARCHS = armv7 armv7s arm64
+export TARGET = iphone:clang:8.1:8.1
+
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = panicLockApps
 panicLockApps_FILES = Tweak.xm
+panicLockApps_FRAMEWORKS = UIKit Foundation
+panicLockApps_LIBRARIES = applist activator
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

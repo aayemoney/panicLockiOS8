@@ -1,4 +1,4 @@
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = panicLockiOS8Prefs
 panicLockiOS8Prefs_FILES = panicLockiOS8Prefs.mm
