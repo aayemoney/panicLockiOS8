@@ -31,7 +31,7 @@
 
 	if (YES) NSLog(@"ra86 tweak apps detected activator action.");
  
-	[event setHandled:YES]; // To prevent the default OS implementation
+	// [event setHandled:YES]; // To prevent the default OS implementation, ROOT TWEAK file takes care of this
 
 	return;
 }
