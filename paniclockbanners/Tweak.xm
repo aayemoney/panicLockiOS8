@@ -9,7 +9,6 @@
 
 #include "../panicLockData.h"
 
-#define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.panicLockiOS8Prefs.plist"
 
 
 
