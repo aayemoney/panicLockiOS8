@@ -1,9 +1,9 @@
 export ARCHS = armv7 armv7s arm64
-export TARGET = iphone:clang:7.1:7.1
+export TARGET = iphone:clang:8.1:8.1
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = panicLock iOS8
+TWEAK_NAME = panicLockiOS8
 panicLockiOS8_FRAMEWORKS = UIKit Foundation
 panicLockiOS8_FILES = Tweak.xm
 panicLockiOS8_LIBRARIES = applist activator

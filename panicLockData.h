@@ -1,0 +1,7 @@
+@interface panicLockData : NSObject
+
+
+
+
+
+@end
