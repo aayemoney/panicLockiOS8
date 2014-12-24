@@ -103,5 +103,3 @@ static BOOL isPanicLockActive;
 
 
 
-
-
