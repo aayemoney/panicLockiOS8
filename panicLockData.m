@@ -12,10 +12,44 @@
 #define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.panicLockiOS8Prefs.plist"
 
 
+// Static Vars
+static BOOL isPanicLockActive;
+
+// Static Methods
+static void loadPrefs() {
+
+	NSLog(@"ra86: Loading paniclock iOS 8 prefs.");
+
+	NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:FILE_PATH];
+
+	if (prefs == nil) {
+
+		NSLog(@"ra86: Prefs nil. returning.");
+		return;
+
+	}
+
+	else {
+
+		NSNumber *isEnabled_NSNumber = [prefs objectForKey:@"isEnabled_NSNumber"];
+		isPanicLockActive = [isEnabled_NSNumber boolValue];
+		NSLog(@"ra86: Loaded paniclock iOS 8 prefs, prev. lock status: %d", isPanicLockActive);
+
+	}
+
+	[prefs release];
+
+}
+
+
 @implementation panicLockData
 
-static BOOL isPanicLockActive;
-// static NSString *testString;
+// Runs on initialization to load previous lock status
++ (void)initialize {
+
+	 loadPrefs();
+	 
+}
 
 + (BOOL)isPanicLockActive {
 
@@ -47,32 +81,26 @@ static BOOL isPanicLockActive;
 
 + (void)saveStatusToDisk:(BOOL)statusToSave {
 
-	NSMutableDictionary *prefs = [panicLockData getPrefsDictionary];
+	// Package status to save into NSNumber for saving
+	NSNumber *isEnabled_NSNumber = [NSNumber numberWithBool:statusToSave];
 
-	// isEnabled_NSNumber = [NSNumber numberWithBool:isEnabled];
-
-	if (prefs == nil) {
-
-		NSLog(@"ra86 prefs was nil.");
-
-	}
-
-}
-
-+ (NSMutableDictionary *)getPrefsDictionary {
-
-	NSMutableDictionary *returnDictionary;
-
-	returnDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:FILE_PATH];
+	// Get save location
+	NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:FILE_PATH];
 
 	// Handle Initializing Case
-	if (returnDictionary == nil) {
+	if (prefs == nil) {
 
 		[panicLockData displayWelcomeMessage];
+		prefs = [[NSMutableDictionary alloc] initWithObjectsAndKeys: isEnabled_NSNumber, @"isEnabled_NSNumber", nil];
 
 	}
 
-	return returnDictionary;
+	// Write to save location
+	[prefs setObject:isEnabled_NSNumber forKey:@"isEnabled_NSNumber"];
+	[prefs writeToFile:FILE_PATH atomically:YES];
+	NSLog(@"ra86: Successfully wrote state: %d to file.", [isEnabled_NSNumber boolValue]);
+
+	[prefs release];
 
 }
 
