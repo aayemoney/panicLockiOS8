@@ -14,8 +14,7 @@
 - (void)launchFromLocation:(int)arg1 {
 
 	BOOL panicLockActive = [panicLockData isPanicLockActive];
-	NSLog(@"ra86: apps tweak file got: %d", panicLockActive);
-
+	
 	if (panicLockActive) {
 
 		return;
