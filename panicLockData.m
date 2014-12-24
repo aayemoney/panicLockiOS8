@@ -10,6 +10,12 @@ static NSLock *accessLock;
 
 }
 
++ (void)flipPanicLockStatus {
+
+	[panicLockData ensureLockAlloc];
+
+}
+
 + (void)ensureLockAlloc {
 
 	if (accessLock == nil) {
