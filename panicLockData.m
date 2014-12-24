@@ -14,7 +14,7 @@
 
 @implementation panicLockData
 
-static BOOL isPanicLockActive = true;
+static BOOL isPanicLockActive;
 // static NSString *testString;
 
 + (BOOL)isPanicLockActive {
