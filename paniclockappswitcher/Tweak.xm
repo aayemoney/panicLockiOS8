@@ -3,48 +3,15 @@
 // panicLockPro by Ruslan Ardashev 
 // ruslan.ardashev@duke.edu
 // www.ruslanArdashev.com
-// Copyright 2014
+// Copyright 2015
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-#import <libactivator/libactivator.h>
 #include "../panicLockData.h"
 
 #define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproios8prefs.plist"
 
-@interface panicLockiOS8AppSwitcherListener : NSObject <LAListener>
-@end
- 
 
-@implementation panicLockiOS8AppSwitcherListener
- 
-+ (void)load {
-
-	if ([LASharedActivator isRunningInsideSpringBoard]) {
-		[LASharedActivator registerListener:[self new] forName:@"com.ruslan.paniclockproios8"];
-	}
-
-}
-
-- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event
-{
-
-	if (YES) NSLog(@"ra86 tweak appswitcher detected activator action.");
- 
-	// [event setHandled:YES]; // To prevent the default OS implementation, ROOT TWEAK file takes care of this
-
-	return;
-}
- 
-- (void)activator:(LAActivator *)activator abortEvent:(LAEvent *)event {
-		
-	if (YES) NSLog(@"activatorAbortEvent called.");
-
-	// Dismiss your plugin
-
-}
-
-@end
 
 /* How to Hook with Logos
 Hooks are written with syntax similar to that of an Objective-C @implementation.
