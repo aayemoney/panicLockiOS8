@@ -7,9 +7,28 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "panicLockData.h"
-#include "panicLockiOS8Listener.h"
+#include "../panicLockData.h"
 
+%hook SBApplicationIcon
 
+- (void)launchFromLocation:(int)arg1 {
 
+	BOOL panicLockActive = [panicLockData isPanicLockActive];
+	NSLog(@"ra86: apps tweak file got: %d", panicLockActive);
+
+	if (panicLockActive) {
+
+		return;
+
+	}
+
+	else {
+
+		%orig;
+		
+	}
+
+}
+
+%end
 

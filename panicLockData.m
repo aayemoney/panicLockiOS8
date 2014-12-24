@@ -19,22 +19,12 @@ static BOOL isPanicLockActive;
 
 + (BOOL)isPanicLockActive {
 
-	//if (testString == nil) {
-	//	testString = [[NSString alloc] init];
-	//	NSLog(@"ra86: string was nil, created at %@", testString);
-	//}
-
 	NSLog(@"ra86: panicLockData.m: accessed isPanicLockActive called. returns: %d", isPanicLockActive);
 	return isPanicLockActive;
 
 }
 
 + (void)flipPanicLockStatus {
-
-	//if (testString == nil) {
-	//	testString = [[NSString alloc] init];
-	//	NSLog(@"ra86: string was nil, created at %@", testString);
-	//}
 
 	if (isPanicLockActive) {
 
