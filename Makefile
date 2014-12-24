@@ -14,3 +14,4 @@ after-install::
 	install.exec "killall -9 SpringBoard"
 SUBPROJECTS += paniclockios8prefs
 include $(THEOS_MAKE_PATH)/aggregate.mk
+
