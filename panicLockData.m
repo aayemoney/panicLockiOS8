@@ -51,6 +51,12 @@ static BOOL isPanicLockActive;
 
 	// isEnabled_NSNumber = [NSNumber numberWithBool:isEnabled];
 
+	if (prefs == nil) {
+
+		NSLog(@"ra86 prefs was nil.");
+
+	}
+
 }
 
 + (NSMutableDictionary *)getPrefsDictionary {
@@ -72,11 +78,14 @@ static BOOL isPanicLockActive;
 
 + (void)displayWelcomeMessage {
 
-	UIAlertView *alert = [UIAlertView alloc] initWithTitle:@"Welcome to panicLock for iOS 8"
-							  					   message:@"Preference file created. panicLock will now remember lock status between reboots for security purposes."
-							 					  delegate:nil
-				 						 cancelButtonTitle:@"Got it, thanks!"
-				 						 otherButtonTitles:nil];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to panicLock for iOS 8"
+							  					    message:@"Preference file created. panicLock will now remember lock status between reboots for security purposes."
+							 					   delegate:nil
+				 						  cancelButtonTitle:@"Got it, thanks!"
+				 						  otherButtonTitles:nil];
+
+	[alert show];
+	[alert release];
 
 }
 
