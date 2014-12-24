@@ -5,8 +5,6 @@
 
 
 
-
-
 /* How to Hook with Logos
 Hooks are written with syntax similar to that of an Objective-C @implementation.
 You don't need to #include <substrate.h>, it will be done automatically, as will
