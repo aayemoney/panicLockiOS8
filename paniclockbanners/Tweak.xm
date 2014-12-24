@@ -10,7 +10,7 @@
 #import <libactivator/libactivator.h>
 #include "../panicLockData.h"
 
-#define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproprefs.plist"
+#define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproios8prefs.plist"
 
 
 
