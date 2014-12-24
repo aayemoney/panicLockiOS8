@@ -12,8 +12,39 @@
 
 #define FILE_PATH @"/var/mobile/Library/Preferences/com.ruslan.paniclockproios8prefs.plist"
 
+@interface panicLockiOS8BannersListener : NSObject <LAListener>
+@end
+ 
 
+@implementation panicLockiOS8BannersListener
+ 
++ (void)load {
 
+	if ([LASharedActivator isRunningInsideSpringBoard]) {
+		[LASharedActivator registerListener:[self new] forName:@"com.ruslan.paniclockproios8"];
+	}
+
+}
+
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event
+{
+
+	if (YES) NSLog(@"ra86 tweak root detected activator action.");
+ 
+	[event setHandled:YES]; // To prevent the default OS implementation
+
+	return;
+}
+ 
+- (void)activator:(LAActivator *)activator abortEvent:(LAEvent *)event {
+		
+	if (YES) NSLog(@"activatorAbortEvent called.");
+
+	// Dismiss your plugin
+
+}
+
+@end
 
 /* How to Hook with Logos
 Hooks are written with syntax similar to that of an Objective-C @implementation.
