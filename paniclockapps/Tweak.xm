@@ -29,7 +29,7 @@
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event
 {
 
-	if (YES) NSLog(@"ra86 tweak root detected activator action.");
+	if (YES) NSLog(@"ra86 tweak apps detected activator action.");
  
 	[event setHandled:YES]; // To prevent the default OS implementation
 
