@@ -21,7 +21,7 @@
 
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
 
-	if (YES) NSLog(@"ra86 tweak root detected activator action.");
+	NSLog(@"ra86: Detected activator action, calling flipPanicLockStatus to panicLockData.");
  
 	[panicLockData flipPanicLockStatus];
 

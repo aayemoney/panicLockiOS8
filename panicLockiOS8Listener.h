@@ -17,5 +17,8 @@
 #import "panicLockData.h"
 
 @interface panicLockiOS8Listener : NSObject <LAListener>
++ (void)load;
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event;
+- (void)activator:(LAActivator *)activator abortEvent:(LAEvent *)event;
 @end
 
