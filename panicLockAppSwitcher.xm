@@ -16,7 +16,7 @@
 
 	if ([panicLockData isPanicLockActive]) {
 
-		NSLog(@"ra86: _toggleSwitcherForReals swizzled.");
+		// NSLog(@"ra86: _toggleSwitcherForReals swizzled.");
 
 	}
 	
@@ -32,7 +32,7 @@
 
 	if ([panicLockData isPanicLockActive]) {
 
-		NSLog(@"ra86: _toggleSwitcher swizzled.");
+		// NSLog(@"ra86: _toggleSwitcher swizzled.");
 
 	}
 	

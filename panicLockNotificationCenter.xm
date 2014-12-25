@@ -18,7 +18,7 @@
 
 	if (isPanicLockActive) {
 
-		NSLog(@"ra86: panicLock block notification center.");
+		// NSLog(@"ra86: panicLock block notification center.");
 
 	}
 	

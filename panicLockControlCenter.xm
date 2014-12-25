@@ -16,7 +16,7 @@
 
 	if ([panicLockData isPanicLockActive]) {
 
-		NSLog(@"ra86: swizzled show control center");
+		// NSLog(@"ra86: swizzled show control center");
 
 	}
 
