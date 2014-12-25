@@ -10,5 +10,39 @@
 #include "../panicLockData.h"
 
 
+%hook SBUIController
 
+-(void)_toggleSwitcherForReals { 
+
+	if ([panicLockData isPanicLockActive]) {
+
+		NSLog(@"ra86: _toggleSwitcherForReals swizzled.");
+
+	}
+	
+	else {
+
+		%orig; 
+	
+	}
+
+}
+
+-(void)_toggleSwitcher { 
+
+	if ([panicLockData isPanicLockActive]) {
+
+		NSLog(@"ra86: _toggleSwitcher swizzled.");
+
+	}
+	
+	else {
+
+		%orig; 
+
+	}
+
+}
+
+%end
 
