@@ -12,37 +12,23 @@
 
 %hook SBUIController
 
--(void)_toggleSwitcherForReals { 
+-(void)handleShowControlCenterSystemGesture:(id)gesture { 
 
 	if ([panicLockData isPanicLockActive]) {
 
-		NSLog(@"ra86: _toggleSwitcherForReals swizzled.");
+		NSLog(@"ra86: swizzled show control center");
 
 	}
-	
+
 	else {
 
-		%orig; 
-	
-	}
-
-}
-
--(void)_toggleSwitcher { 
-
-	if ([panicLockData isPanicLockActive]) {
-
-		NSLog(@"ra86: _toggleSwitcher swizzled.");
-
-	}
-	
-	else {
-
-		%orig; 
+		%orig;
 
 	}
 
 }
 
 %end
+
+
 
