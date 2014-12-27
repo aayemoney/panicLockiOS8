@@ -53,7 +53,7 @@ static void loadPrefs() {
 
 + (BOOL)isPanicLockActive {
 
-	NSLog(@"ra86: panicLockData.m: accessed isPanicLockActive called. returns: %d", isPanicLockActive);
+	// NSLog(@"ra86: panicLockData.m: accessed isPanicLockActive called. returns: %d", isPanicLockActive);
 	return isPanicLockActive;
 
 }
