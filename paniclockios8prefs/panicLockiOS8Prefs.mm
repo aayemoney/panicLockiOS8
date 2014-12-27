@@ -11,24 +11,19 @@
 	}
 	return _specifiers;
 }
-
--(void) sendEmail
-{
+-(void) sendEmail {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:ruslan.ardashev@duke.edu?subject=panicLockPro"]];
 }
 
--(void) openInstructions
-{
+-(void) openInstructions {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=QFnOcuC28XQ"]];
 }
 
--(void) openYoutubeChannel
-{
+-(void) openYoutubeChannel {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/user/Ruslan120101"]];
 }
 
 @end
 
-
-
 // vim:ft=objc
+
