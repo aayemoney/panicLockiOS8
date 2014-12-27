@@ -10,6 +10,25 @@
 #include "../panicLockData.h"
 
 
+%hook SBAssistantController
+
++(BOOL)shouldEnterAssistant { 
+
+	if ([panicLockData isPanicLockActive]) {
+
+		return NO;
+
+	}
+
+	else {
+
+		return %orig;
+
+	}
+
+}
+
+%end
 
 
 
