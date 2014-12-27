@@ -10,6 +10,9 @@
 #include "../panicLockData.h"
 
 
+@class CAMImageWell;
+
+
 %hook CAMBottomBar
 
 - (void)setImageWell:(CAMImageWell *)imageWell { 
