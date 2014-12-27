@@ -5,7 +5,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = panicLockiOS8
 panicLockiOS8_FRAMEWORKS = UIKit Foundation
-panicLockiOS8_FILES = Tweak.xm panicLockData.m panicLockiOS8Listener.m panicLockApps.xm panicLockAppSwitcher.xm panicLockBanners.xm panicLockNotificationCenter.xm panicLockControlCenter.xm panicLockSiri.xm panicLockNewsstand.xm
+panicLockiOS8_FILES = Tweak.xm panicLockApps.xm panicLockData.m panicLockiOS8Listener.m panicLockAppSwitcher.xm panicLockBanners.xm  panicLockCamera.xm panicLockControlCenter.xm panicLockNewsstand.xm panicLockNotificationCenter.xm panicLockSiri.xm 
 panicLockiOS8_LIBRARIES = applist activator
 
 include $(THEOS_MAKE_PATH)/tweak.mk
