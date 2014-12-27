@@ -5,6 +5,6 @@
 	detail = panicLockiOS8PrefsListController;
 	icon = panicLockiOS8Prefs.png;
 	isController = 1;
-	label = panicLock [iOS 8];
+	label = "panicLock [iOS 8]";
     };
 }
