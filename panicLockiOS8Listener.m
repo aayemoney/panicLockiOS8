@@ -14,7 +14,7 @@
 + (void)load {
 
 	if ([LASharedActivator isRunningInsideSpringBoard]) {
-		[LASharedActivator registerListener:[self new] forName:@"com.ruslan.paniclockproios8"];
+		[LASharedActivator registerListener:[self new] forName:@"com.ruslan.paniclockios8"];
 	}
 
 }
