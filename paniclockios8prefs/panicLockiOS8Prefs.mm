@@ -19,6 +19,10 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=QFnOcuC28XQ"]];
 }
 
+-(void) openDemo {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/watch?v=JYyvcY6P_I8"]];
+}
+
 -(void) openYoutubeChannel {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.youtube.com/user/Ruslan120101"]];
 }
