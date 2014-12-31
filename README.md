@@ -12,6 +12,7 @@
 #### CHANGELOG ####
 * v1.0 - Initial release.
 * v1.1 - Protects from Spotlight!
+* v1.2 - Protects from LockScreen Camera grabber!
 
 
 # *panicLockPro [Available Soon]*
