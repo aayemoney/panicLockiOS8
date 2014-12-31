@@ -15,7 +15,7 @@
 		    <key>label</key> 			<string>Activation Methods</string>
 		    <key>isController</key> 	<true/>
 		    <key>bundle</key> 			<string>LibActivator</string>
-		    <key>activatorListener</key> <string>com.ruslan.paniclockproios8</string>
+		    <key>activatorListener</key> <string>com.ruslan.paniclockios8</string>
 		</dict>
 
 		<dict>
