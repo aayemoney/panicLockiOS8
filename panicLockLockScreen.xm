@@ -78,6 +78,42 @@
 
 %end
 
+%hook SBLockScreenViewController
+
+-(BOOL)suppressesControlCenter { 
+
+	if ([panicLockData isPanicLockActive]) {
+
+		return YES;
+
+	}
+
+	else {
+
+		return %orig;
+
+	}
+
+}
+
+-(BOOL)suppressesNotificationCenter { 
+
+	if ([panicLockData isPanicLockActive]) {
+
+		return YES;
+
+	}
+
+	else {
+
+		return %orig;
+
+	}
+
+}
+
+%end
+
 
 
 
