@@ -13,6 +13,8 @@
 * v1.0 - Initial release.
 * v1.1 - Protects from Spotlight!
 * v1.2 - Protects from LockScreen Camera grabber!
+* v1.3 - Prevents lockscreen notifications when enabled!
+* v1.4 - Locks Notification Center and Control Center from lockscreen when enabled!
 
 
 # *panicLockPro [Available Soon]*
