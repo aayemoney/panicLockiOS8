@@ -1,4 +1,4 @@
-# *panicLock*
+# *panicLock [iOS 8]*
 
 1. Launch Settings and navigate to panicLockPrefs.
 2. Configure your secret gesture.
@@ -17,7 +17,7 @@
 * v1.4 - Locks Notification Center and Control Center from lockscreen when enabled!
 
 
-# *panicLockPro [Available Soon]*
+# *panicLockPro [iOS 8] [Available Now on the Cydia Store]*
 
 #### Additional Features ####
 * The ability to select which apps to discretely disable, as opposed to all.
